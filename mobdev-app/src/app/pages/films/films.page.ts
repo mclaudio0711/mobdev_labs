@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+
 @Component({
   selector: 'app-films',
   templateUrl: './films.page.html',
@@ -16,6 +17,7 @@ export class FilmsPage implements OnInit {
 
   ngOnInit() {
     this.films = this.http.get('https://swapi.dev/api/films');
+    this.films.subscribe(data =>{console.log('myData: ', data)});
   }
  
   openDetails(film) {
