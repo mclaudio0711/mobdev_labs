@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Hello world
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Hello</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container"class="ion-padding">
+   
+      <ion-button expand="full" (click)="updateMyValue()">Click here</ion-button>
+        
+      <h1> {{ myVariable }} </h1>
+
+      <ion-button expand="full" (click)="updateMyValue2()">Click Me</ion-button>
+
+    
+  </div>
+</ion-content>
+
