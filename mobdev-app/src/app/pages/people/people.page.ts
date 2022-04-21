@@ -21,7 +21,7 @@ export class PeoplePage implements OnInit {
   }
   openDetails(people) {
     let split = people.url.split('/');
-    let filmId = split[split.length-2];
+    let peopleName = split[split.length-2];
     this.router.navigateByUrl(`/tabs/people/${peopleName}`);
   }
 }

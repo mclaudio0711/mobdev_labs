@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" defaultHref="/tabs/(people:people)">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{people?.name}}</ion-title>
+<!-- 
+    <ion-buttons slot="end">
+      <ion-button (click)="unfavoriteFilm()" *ngIf="isFavorite">
+        <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
+      </ion-button>
+      <ion-button (click)="favoriteFilm()" *ngIf="!isFavorite">
+        <ion-icon name="star-outline" slot="icon-only" color="secondary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+ -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding="">
+  <ion-card *ngIf="people" class="people-card">
+    <ion-card-header class="bold">{{ people.name }}: {{ people.gender }} gender.</ion-card-header>
+
+    <ion-card-content>
+      Height: {{ people.height }} 
+      <br>Hair: {{ people.hair_color }}
+      <br>Skin: {{ people.skin_color }}
+      <br>Eye: {{ people.eye_color }}
+      <br><br>Birth year: {{ people.birth_year }}
+    </ion-card-content>
+
+    <ion-item class="people-info" lines="none">
+      <ion-icon name="home" slot="start"></ion-icon>
+      Home World: {{ people.homeworld }}
+    </ion-item>
+  </ion-card>
+
+</ion-content>
