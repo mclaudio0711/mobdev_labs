@@ -17,7 +17,7 @@ export class FilmsPage implements OnInit {
 
   ngOnInit() {
     this.films = this.http.get('https://swapi.dev/api/films');
-    this.films.subscribe(data =>{console.log('myData: ', data)});
+    this.films.subscribe(data =>{console.log('myDataFilms: ', data)});
   }
  
   openDetails(film) {

@@ -17,6 +17,11 @@ export class PeoplePage implements OnInit {
 
   ngOnInit() {
     this.peoples =  this.http.get('https://swapi.dev/api/people');
+    this.peoples.subscribe(data =>{console.log('myDataPeople: ', data)})
   }
-
+  openDetails(people) {
+    let split = people.url.split('/');
+    let filmId = split[split.length-2];
+    this.router.navigateByUrl(`/tabs/people/${peopleName}`);
+  }
 }
